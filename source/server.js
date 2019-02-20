@@ -2,12 +2,11 @@
 import express from 'express';
 
 // Instruments
-import { teachersRoute, pupilsRoute, parentsRoute } from './routes';
+import { classesRouter, subjectRouter } from './routes';
 
 const app = express();
 
-app.use('/teachers', teachersRoute);
-app.use('/pupils', pupilsRoute);
-app.use('/parents', parentsRoute);
+app.use('/classes', classesRouter);
+app.use('/subject', subjectRouter);
 
 export { app };
